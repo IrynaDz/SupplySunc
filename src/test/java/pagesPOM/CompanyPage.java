@@ -1,20 +1,14 @@
-package tests.AutomationPOM;
+package pagesPOM;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class SupplySyncPOM {
-    public SupplySyncPOM() {
+public class CompanyPage {
+    public CompanyPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(id="input")
-    public WebElement loginField;
-    @FindBy(id="password")
-    public WebElement passwordField;
-    @FindBy(tagName = "button")
-    public WebElement signInButton;
     @FindBy(xpath = "//span[text()='Companies']")
     public WebElement companies;
     @FindBy(xpath = "(//button[@type='button'])[2]")
