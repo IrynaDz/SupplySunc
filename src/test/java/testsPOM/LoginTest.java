@@ -6,7 +6,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
-import pagesPOM.LoginPage;
+import pages.LoginPage;
 import pagesPOM.MainPage;
 import utilities.Driver;
 
