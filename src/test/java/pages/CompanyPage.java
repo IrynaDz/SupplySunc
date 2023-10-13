@@ -1,4 +1,4 @@
-package pagesPOM;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +9,12 @@ public class CompanyPage {
     public CompanyPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+    @FindBy(id="input")
+    public WebElement loginField;
+    @FindBy(id="password")
+    public WebElement passwordField;
+    @FindBy(tagName = "button")
+    public WebElement signInButton;
     @FindBy(xpath = "//span[text()='Companies']")
     public WebElement companies;
     @FindBy(xpath = "(//button[@type='button'])[2]")
@@ -27,4 +33,6 @@ public class CompanyPage {
     public WebElement saveButton;
     @FindBy(xpath = "//p[.='Edit Company']")
     public WebElement editCompany;
+    @FindBy(xpath = "//div[contains(text(),'Company successfully changed')]")
+    public WebElement popUpMessage;
 }
