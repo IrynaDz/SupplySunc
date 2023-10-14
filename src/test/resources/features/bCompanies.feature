@@ -1,3 +1,4 @@
+@Regression
 @CompaniesTag
 Feature: verify editing new information of companies
   @Happy_path
