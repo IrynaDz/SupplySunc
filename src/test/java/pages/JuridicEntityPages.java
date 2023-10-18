@@ -18,8 +18,6 @@ public class JuridicEntityPages {
     @FindBy(linkText = "Juridic Entity")
     public WebElement juridicEntityLink;
 
-    @FindBy(xpath = "//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']")
-
     @FindBy(linkText = "//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']")
 
     public  WebElement createLegalEntityButton;
@@ -41,14 +39,8 @@ public class JuridicEntityPages {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement clickButton ;
   
-    @FindBy(xpath = "//div[@id='mui-component-select-branchId']")
-    public WebElement branchField ;
-    @FindBy(xpath = "//input[@name='juridicalCompanyName']")
-    public WebElement legalEntityName ;
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement clickButton ;
-    @FindBy(xpath = "//div[contains(text(),'Legal Entity successfully created')]")
-    public static WebElement popUpMessage;
+
+
 
 }
 
