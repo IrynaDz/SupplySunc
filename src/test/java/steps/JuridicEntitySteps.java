@@ -76,6 +76,7 @@ public class JuridicEntitySteps {
 
     @Then("verify user create new Legal Entity")
     public void verify_user_create_new_legal_entity() {
+        ApplicationFlow.pause(2000);
         List<WebElement> legalEntityNames = driver.findElements(By.xpath("//div[.='Legal entity name']/following::div[1]"));
         for (WebElement name: legalEntityNames){
             String createdName = name.getText().toString();
