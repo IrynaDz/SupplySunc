@@ -19,7 +19,7 @@ public class JuridicEntitySteps {
     WebDriver driver;
     Faker faker = new Faker();
 
-    JuridicEntityPages juridicEntityPages=new JuridicEntityPages();
+    JuridicEntityPages juridicEntityPages = new JuridicEntityPages();
 
 
     @Given("Given login to the site")
@@ -45,38 +45,35 @@ public class JuridicEntitySteps {
     public void click_on_create_legal_entity() {
         ApplicationFlow.pause(2000);
         Actions actions = new Actions(driver);
-        WebElement createLegalEntity = driver.findElement(By.xpath("//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']"));
         ApplicationFlow.pause(2000);
-        actions.moveToElement(createLegalEntity).click().perform();
+        actions.moveToElement(juridicEntityPages.createLegalEntityButton).click().perform();
     }
     @When("fill out all fields in box")
     public void fill_out_all_fields_in_box() {
 
         ApplicationFlow.pause(2000);
-        WebElement companiesFieldParent = driver.findElement(By.id("mui-component-select-companyId"));
-        companiesFieldParent.click();
+        juridicEntityPages.companiesField.click();
         ApplicationFlow.pause(2000);
+
+        juridicEntityPages.branchField.click();
+
         WebElement companiesFieldChild = driver.findElement(By.xpath("//li[@data-value='1'][1]"));
         companiesFieldChild.click();
 
 
-        ApplicationFlow.pause(2000);
-        WebElement branchFieldParent = driver.findElement(By.xpath("(//div[@aria-haspopup='listbox'])[2]"));
-        branchFieldParent.click();
-        WebElement branchFieldChild = driver.findElement(By.xpath("//div[@id='menu-branchId']//li[4]"));
-        branchFieldChild.click();
 
         ApplicationFlow.pause(2000);
-        WebElement legalEtnityField = driver.findElement(By.xpath("//input[@name='juridicalCompanyName']"));
-        legalEtnityField.sendKeys("Nurlan");
+        juridicEntityPages.branchFieldParent.click();
+        juridicEntityPages.branchFieldChild.click();
 
+        ApplicationFlow.pause(2000);
+        juridicEntityPages.legalEtnityField.sendKeys("Nurlan");
 
     }
 
     @When("click on button create Legal Entity")
     public void click_on_button_create_Legal_Entity() {
-        WebElement clickButton = driver.findElement(By.xpath("//button[@type='submit']"));
-        clickButton.click();
+        juridicEntityPages.clickButton.click();
     }
 
     @Then("verify user create new Legal Entity")

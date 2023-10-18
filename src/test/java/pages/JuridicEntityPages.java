@@ -17,10 +17,30 @@ public class JuridicEntityPages {
     public WebElement signInButton;
     @FindBy(linkText = "Juridic Entity")
     public WebElement juridicEntityLink;
+
+    @FindBy(xpath = "//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']")
+
     @FindBy(linkText = "//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']")
+
     public  WebElement createLegalEntityButton;
     @FindBy(xpath = "//div[@id='mui-component-select-companyId']")
     public WebElement companiesField ;
+
+    @FindBy(xpath = "//li[@data-value='1'][1]")
+    public WebElement branchField ;
+
+    @FindBy(xpath = "(//div[@aria-haspopup='listbox'])[2]")
+    public WebElement branchFieldParent;
+
+    @FindBy(xpath = "//div[@id='menu-branchId']//li[4]")
+    public WebElement branchFieldChild;
+
+    @FindBy(xpath = "//input[@name='juridicalCompanyName']")
+    public WebElement legalEtnityField;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement clickButton ;
+  
     @FindBy(xpath = "//div[@id='mui-component-select-branchId']")
     public WebElement branchField ;
     @FindBy(xpath = "//input[@name='juridicalCompanyName']")
@@ -29,6 +49,7 @@ public class JuridicEntityPages {
     public WebElement clickButton ;
     @FindBy(xpath = "//div[contains(text(),'Legal Entity successfully created')]")
     public static WebElement popUpMessage;
+
 }
 
 
