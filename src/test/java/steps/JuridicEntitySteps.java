@@ -45,9 +45,9 @@ public class JuridicEntitySteps {
     public void click_on_create_legal_entity() {
         ApplicationFlow.pause(2000);
         Actions actions = new Actions(driver);
-        WebElement createLegalEntity = driver.findElement(By.xpath("//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']"));
+        WebElement createLegalEntityButton = driver.findElement(By.xpath("//button[@class='sc-ikJyIC idrUqC MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root sc-gsNilK hofTdo sc-dFtzxp khbchy sc-cTAIfT dANijJ']"));
         ApplicationFlow.pause(2000);
-        actions.moveToElement(createLegalEntity).click().perform();
+        actions.moveToElement(createLegalEntityButton).click().perform();
     }
     @When("fill out all fields in box")
     public void fill_out_all_fields_in_box() {
