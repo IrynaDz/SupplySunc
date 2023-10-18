@@ -17,7 +17,6 @@ public class BranchesPage {
     public WebElement signInButton;
     @FindBy(xpath = "//a[@href='/dashboard/branches' ]")
     public WebElement branches;
-
     @FindBy (xpath = "//button[contains(text(),'Create Branch')]")
     public WebElement createBranchButton;
     @FindBy (xpath = "//input[@name='name']")
@@ -34,10 +33,8 @@ public class BranchesPage {
     public WebElement branchRegion;
     @FindBy (id = "mui-component-select-cities")
     public WebElement branchCities;
-
     @FindBy (xpath = "//div[@class='sc-iIUQWv hFxtbj'][8]")
     public WebElement selectCompany;
-
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement createButton;
     @FindBy(xpath = "//div[@tabindex='0']")
