@@ -34,7 +34,7 @@ public class LoginSteps {
         loginPage.signInButton.click();
     }
     @Then("the user should see the main page")
-    public void the_user_should_see_the_main_page() throws InterruptedException {
+    public void the_user_should_see_the_main_page(){
         String expectedUrl = "https://supplysync.us/dashboard/companies";
         ApplicationFlow.pause(3000);
         Assert.assertEquals(expectedUrl, driver.getCurrentUrl());
