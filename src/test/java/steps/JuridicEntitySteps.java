@@ -67,7 +67,7 @@ public class JuridicEntitySteps {
         juridicEntityPages.branchFieldChild.click();
 
         ApplicationFlow.pause(2000);
-        juridicEntityPages.legalEtnityField.sendKeys("Nurlan");
+        juridicEntityPages.legalEntityField.sendKeys("Nurlan");
 
     }
 
@@ -78,12 +78,12 @@ public class JuridicEntitySteps {
 
     @Then("verify user create new Legal Entity")
     public void verify_user_create_new_legal_entity() {
+        ApplicationFlow.pause(2000);
         List<WebElement> legalEntityNames = driver.findElements(By.xpath("//div[.='Legal entity name']/following::div[1]"));
         for (WebElement name: legalEntityNames){
             String createdName = name.getText().toString();
             Assert.assertEquals("No such legal entity", "Nurlan", createdName);
-            System.out.println("Actual name:" + createdName);
-
+            System.out.println("Actual name: " + createdName);
         }
     }
 
