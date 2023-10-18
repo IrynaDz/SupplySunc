@@ -56,7 +56,7 @@ public class JuridicEntitySteps {
         WebElement companiesFieldParent = driver.findElement(By.id("mui-component-select-companyId"));
         companiesFieldParent.click();
         ApplicationFlow.pause(2000);
-        WebElement companiesFieldChild = driver.findElement(By.xpath("//li[.='Steuber-Hirthe']"));
+        WebElement companiesFieldChild = driver.findElement(By.xpath("//li[@data-value='1'][1]"));
         companiesFieldChild.click();
 
 
