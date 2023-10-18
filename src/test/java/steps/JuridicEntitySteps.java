@@ -54,7 +54,12 @@ public class JuridicEntitySteps {
         ApplicationFlow.pause(2000);
         juridicEntityPages.companiesField.click();
         ApplicationFlow.pause(2000);
+
         juridicEntityPages.branchField.click();
+
+        WebElement companiesFieldChild = driver.findElement(By.xpath("//li[@data-value='1'][1]"));
+        companiesFieldChild.click();
+
 
 
         ApplicationFlow.pause(2000);

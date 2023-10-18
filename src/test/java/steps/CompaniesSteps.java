@@ -1,6 +1,7 @@
 package steps;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,7 +34,7 @@ public class CompaniesSteps {
         ApplicationFlow.pause(2000);
         companyPage.companies.click();
     }
-    @When("click on edit")
+    @And("click on edit")
     public void click_on_edit() {
         companyPage.dots.click();
         Actions actions = new Actions(driver);
@@ -80,6 +81,7 @@ public class CompaniesSteps {
     public void empty_the_company_name_field() {
         companyPage.companyName.sendKeys(Keys.COMMAND + "a");
         companyPage.companyName.sendKeys(Keys.BACK_SPACE);
+        ApplicationFlow.pause(2000);
     }
     @Then("verify user cann't save information with empty name field")
     public void verify_user_cann_t_save_information_with_empty_name_field() {
@@ -90,6 +92,7 @@ public class CompaniesSteps {
     }
     @Then("empty the company email field")
     public void empty_the_company_email_field() {
+        ApplicationFlow.pause(2000);
         companyPage.email.sendKeys(Keys.COMMAND + "a");
         companyPage.email.sendKeys(Keys.BACK_SPACE);
     }
@@ -102,6 +105,7 @@ public class CompaniesSteps {
     }
         @Then("empty the company address field")
         public void empty_the_company_address_field() {
+            ApplicationFlow.pause(2000);
             companyPage.address.sendKeys(Keys.COMMAND + "a");
             companyPage.address.sendKeys(Keys.BACK_SPACE);
         }
@@ -114,6 +118,7 @@ public class CompaniesSteps {
         }
     @Then("empty the company phone number field")
     public void empty_the_company_phone_number_field() {
+        ApplicationFlow.pause(2000);
         companyPage.phoneNumber.sendKeys(Keys.COMMAND + "a");
         companyPage.phoneNumber.sendKeys(Keys.BACK_SPACE);
     }

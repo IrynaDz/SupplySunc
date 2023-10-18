@@ -1,5 +1,5 @@
 @Regression
-@login
+@loginTag
 Feature: login functionality
 
   Background:
