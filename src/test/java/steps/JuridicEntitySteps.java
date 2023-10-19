@@ -14,6 +14,7 @@ import utilities.ApplicationFlow;
 import utilities.Driver;
 
 import java.util.List;
+import java.util.Random;
 
 public class JuridicEntitySteps {
     WebDriver driver;
@@ -45,6 +46,7 @@ public class JuridicEntitySteps {
     }
     @When("fill out all fields in box")
     public void fill_out_all_fields_in_box() {
+        Random random = new Random();
 
         ApplicationFlow.pause(2000);
         juridicEntityPages.companiesField.click();
@@ -57,7 +59,7 @@ public class JuridicEntitySteps {
 
         ApplicationFlow.pause(2000);
         juridicEntityPages.branchFieldParent.click();
-        juridicEntityPages.branchFieldChild.click();
+        juridicEntityPages.branchFieldChild.get(random.nextInt(juridicEntityPages.branchFieldChild.size())).click();
 
         ApplicationFlow.pause(2000);
         juridicEntityPages.legalEtnityField.sendKeys("Nurlan");
