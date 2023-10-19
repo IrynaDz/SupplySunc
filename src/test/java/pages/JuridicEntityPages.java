@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class JuridicEntityPages {
     public JuridicEntityPages(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -29,8 +31,8 @@ public class JuridicEntityPages {
     @FindBy(xpath = "(//div[@aria-haspopup='listbox'])[2]")
     public WebElement branchFieldParent;
 
-    @FindBy(xpath = "//div[@id='menu-branchId']//li[4]")
-    public WebElement branchFieldChild;
+    @FindBy(xpath = "//div[@id='menu-branchId']//li")
+    public List<WebElement> branchFieldChild;
 
     @FindBy(xpath = "//input[@name='juridicalCompanyName']")
     public WebElement legalEtnityField;

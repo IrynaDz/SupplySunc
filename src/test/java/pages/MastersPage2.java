@@ -52,7 +52,10 @@ public class MastersPage2 {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement createButton;
 
-    @FindBy(xpath = "(//div[@role='alert']//div)[2]")
+    @FindBy(xpath = "(//div[.='Master added successfully'])[1]")
     public WebElement positiveMessage;
+
+//    some message
+
 
 }
