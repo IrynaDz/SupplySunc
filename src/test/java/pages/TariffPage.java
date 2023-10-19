@@ -51,4 +51,7 @@ public class TariffPage {
     public WebElement deleteButton;
     @FindBy(xpath = "//button[2]")
     public WebElement actionPerform;
+    @FindBy(xpath = "//div[contains(text(),'Tariff removed successfully')]")
+    public WebElement findPopUpMessage;
+
 }

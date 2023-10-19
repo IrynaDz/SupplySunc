@@ -18,10 +18,7 @@ import java.util.List;
 public class JuridicEntitySteps {
     WebDriver driver;
     Faker faker = new Faker();
-
     JuridicEntityPages juridicEntityPages = new JuridicEntityPages();
-
-
     @Given("Given login to the site")
     public void given_login_to_the_site() {
         driver = Driver.getDriver();
@@ -34,13 +31,11 @@ public class JuridicEntitySteps {
         ApplicationFlow.pause(2000);
         juridicEntityPages.signInButton.click();
     }
-
     @When("navigate to the Juridic Entity page")
     public void navigate_to_the_juridic_entity_page() {
         ApplicationFlow.pause(2000);
         juridicEntityPages.juridicEntityLink.click();
     }
-
     @When("click on create Legal Entity")
     public void click_on_create_legal_entity() {
         ApplicationFlow.pause(2000);
@@ -66,14 +61,11 @@ public class JuridicEntitySteps {
 
         ApplicationFlow.pause(2000);
         juridicEntityPages.legalEtnityField.sendKeys("Nurlan");
-
     }
-
     @When("click on button create Legal Entity")
     public void click_on_button_create_Legal_Entity() {
         juridicEntityPages.clickButton.click();
     }
-
     @Then("verify user create new Legal Entity")
     public void verify_user_create_new_legal_entity() {
         ApplicationFlow.pause(2000);
@@ -82,9 +74,7 @@ public class JuridicEntitySteps {
             String createdName = name.getText().toString();
             Assert.assertEquals("No such legal entity", "Nurlan", createdName);
             System.out.println("Actual name:" + createdName);
-
         }
     }
-
 }
 

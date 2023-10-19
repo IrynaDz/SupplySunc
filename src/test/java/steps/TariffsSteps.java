@@ -54,4 +54,29 @@ public class TariffsSteps {
             System.out.println("Element with visible text not found or verification failed.");
         }
     }
+    @When("click on row of tariffs")
+    public void click_on_row_of_tariffs() {
+        tariffPage.row.click();
+    }
+    @When("hover over to dot's menu and click")
+    public void hover_over_to_dot_s_menu_and_click() {
+        tariffPage.menuIcon.click();
+    }
+    @When("choose delete button")
+    public void choose_delete_button() {
+        tariffPage.deleteButton.click();
+    }
+    @When("confirm deleting")
+    public void confirm_deleting() {
+        tariffPage.actionPerform.click();
+    }
+    @Then("verify user was able delete tariff")
+    public void verify_user_was_able_delete_tariff() {
+        String expectedText = "Tariff removed successfully";
+        if (tariffPage.findPopUpMessage.isDisplayed() && tariffPage.findPopUpMessage.getText().contains(expectedText)) {
+            System.out.println("PopUp message with visible text found and verified.");
+        } else {
+            System.out.println("Element with visible text not found or verification failed.");
+        }
+    }
 }
