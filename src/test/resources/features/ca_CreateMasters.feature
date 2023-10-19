@@ -1,4 +1,5 @@
 @Regression
+  @CreateMasters
 Feature: create masters
   Background:
     Given user navigates to the login page

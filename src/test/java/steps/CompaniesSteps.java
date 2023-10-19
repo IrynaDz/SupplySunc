@@ -71,6 +71,7 @@ public class CompaniesSteps {
     @Then("verify user edit company information")
     public void verify_user_edit_company_information() {
         String expectedText = "Company successfully changed";
+        ApplicationFlow.pause(2000);
         if (companyPage.popUpMessage.isDisplayed() && companyPage.popUpMessage.getText().contains(expectedText)) {
             System.out.println("PopUp message with visible text found and verified.");
         } else {
