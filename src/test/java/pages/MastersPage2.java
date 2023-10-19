@@ -55,6 +55,7 @@ public class MastersPage2 {
     @FindBy(xpath = "(//div[.='Master added successfully'])[1]")
     public WebElement positiveMessage;
 
+//    some message
 
 
 }
